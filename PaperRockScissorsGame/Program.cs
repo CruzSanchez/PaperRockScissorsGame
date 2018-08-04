@@ -11,7 +11,8 @@ namespace PaperRockScissorsGame
 			int randomNum;
 			bool playagain = true;
 
-			Console.WriteLine("Lets play paper, rock, scissors. We're going to a score of 3!");
+			Console.WriteLine("Lets play paper, rock, scissors. Fun fact: (In Japanese culture they call this game Jan-Ken-Pon!)\nWe're going to a score of 3!");
+			Console.WriteLine();
 
 			while (playagain == true)
 			{
@@ -20,13 +21,13 @@ namespace PaperRockScissorsGame
 
 				while (playerScore < 3 && cpuScore < 3)
 				{
-					Console.WriteLine();
+					
 					Console.Write("Please type: paper, rock, or scissors:   ");
 					playerChoice = Console.ReadLine();
 					playerChoice = playerChoice.ToLower();
 					while(playerChoice != "paper" && playerChoice != "rock" && playerChoice != "scissors")
 					{
-						Console.Write("Please choose: paper, rock, or scissors    ");
+						Console.Write("Please choose: paper, rock, or scissors   ");
 						playerChoice = Console.ReadLine();
 						playerChoice = playerChoice.ToLower();
 					}
@@ -100,7 +101,7 @@ namespace PaperRockScissorsGame
 							break;
 					}
 
-					Console.WriteLine("\n\nScores:\tPlayer:\t{0}\tCPU:\t{1}", playerScore, cpuScore);
+					Console.WriteLine("\nScores:\tPlayer:\t{0}\tCPU:\t{1}", playerScore, cpuScore);
 
 					if (playerScore == 3)
 					{
@@ -116,6 +117,12 @@ namespace PaperRockScissorsGame
 				Console.WriteLine("Play Again? (y/n)");
 				string answer = Console.ReadLine();
 				answer = answer.ToLower();
+				while (answer != "y" && answer != "n")
+				{
+					Console.Write("Please enter a 'y' or a 'n'   ");
+					answer = Console.ReadLine();
+				}
+
 				if (answer == "y")
 				{
 					playagain = true;
@@ -124,7 +131,7 @@ namespace PaperRockScissorsGame
 				else if (answer == "n" || answer == "no")
 				{
 					Console.WriteLine("Thanks for playing!!");
-					Console.Write("Press any key to continue...");
+					Console.Write("Press Enter to continue...");
 					Console.ReadLine();
 					playagain = false;
 				}
