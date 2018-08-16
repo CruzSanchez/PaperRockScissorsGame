@@ -42,9 +42,11 @@
             this.playerScore = new System.Windows.Forms.Label();
             this.computerScore = new System.Windows.Forms.Label();
             this.drawScore = new System.Windows.Forms.Label();
+            this.computerPicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.paper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scissors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // paper
@@ -183,11 +185,22 @@
             this.drawScore.TabIndex = 13;
             this.drawScore.Text = "0";
             // 
+            // computerPicture
+            // 
+            this.computerPicture.Image = ((System.Drawing.Image)(resources.GetObject("computerPicture.Image")));
+            this.computerPicture.Location = new System.Drawing.Point(313, 123);
+            this.computerPicture.Name = "computerPicture";
+            this.computerPicture.Size = new System.Drawing.Size(130, 130);
+            this.computerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.computerPicture.TabIndex = 14;
+            this.computerPicture.TabStop = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.computerPicture);
             this.Controls.Add(this.drawScore);
             this.Controls.Add(this.computerScore);
             this.Controls.Add(this.playerScore);
@@ -206,6 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.paper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scissors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.computerPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +240,7 @@
         private System.Windows.Forms.Label playerScore;
         private System.Windows.Forms.Label computerScore;
         private System.Windows.Forms.Label drawScore;
+        private System.Windows.Forms.PictureBox computerPicture;
     }
 }
 
