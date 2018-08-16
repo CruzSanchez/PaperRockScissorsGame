@@ -16,5 +16,25 @@ namespace RockPaperScissorsGame
         {
             InitializeComponent();
         }
+
+        private void paper_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scissors_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
