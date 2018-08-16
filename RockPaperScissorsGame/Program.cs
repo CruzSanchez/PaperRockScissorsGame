@@ -1,13 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace PaperRockScissorsGame
+namespace RockPaperScissorsGame
 {
-    class Program
+    public static class Program
     {
-		static void Main(string[] args)
-		{
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new MainWindow());
 
-			string playerChoice, cpuChoice;
+            /*
+            string playerChoice, cpuChoice;
 			int randomNum;
 			bool playagain = true;
 
@@ -136,8 +148,9 @@ namespace PaperRockScissorsGame
 					playagain = false;
 				}
 			}
+            */
+        }
 
-			
-		}
+        public enum PlayOptions { Paper, Rock, Scissors }
     }
 }
